@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { Code, Palette, Zap, Briefcase, GraduationCap } from 'lucide-react';
-import profileImg from '../../assets/chan.png';
+import profileImg from '../../assets/image.png';
 
 export function About() {
   const ref = useRef<HTMLElement>(null);

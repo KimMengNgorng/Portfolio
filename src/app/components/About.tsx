@@ -36,7 +36,7 @@ export function About() {
     {
       icon: Briefcase,
       title: 'Developer at TSD Co., Ltd.',
-      period: '2026 - Present',
+      period: '2025 - Present',
       description: 'Technology Solution Development',
     },
     {
@@ -47,9 +47,9 @@ export function About() {
     },
     {
       icon: GraduationCap,
-      title: 'Computer Science Graduate',
+      title: 'Management Information System(MIS) Graduate',
       period: '2022 - 2025',
-      description: 'Royal University of Phnom Penh (RUPP)',
+      description: 'SETEC Institute - Graduated with a strong foundation in information systems, database management, and software development',
     },
   ];
 
@@ -94,7 +94,7 @@ export function About() {
               className="text-gray-300 space-y-4"
             >
               <p className="text-lg">
-                I'm Kim MengNgorng, a Computer Science graduate from the Royal University of Phnom Penh (RUPP). I consider myself a responsible, organized, and hardworking individual.
+                I'm Kim MengNgorng, a Management Information System(MIS) graduate from the SETEC Institute. I consider myself a responsible, organized, and hardworking individual.
               </p>
               <p className="text-lg">
                 I'm eager to apply my knowledge and gain new experiences in my professional career. Currently working as a Developer at Technology Solution Development TSD Co., Ltd.

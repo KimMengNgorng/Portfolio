@@ -19,14 +19,14 @@ export function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'sokchan.dev@gmail.com',
-      href: 'mailto:sokchan.dev@gmail.com',
+      value: 'mengngorngkim@gmail.com',
+      href: 'mailto:mengngorngkim@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+855 XX XXX XXX',
-      href: 'tel:+855xxxxxxxx',
+      value: '+855 78 326 889',
+      href: 'tel:+85578326889',
     },
     {
       icon: MapPin,
@@ -112,7 +112,7 @@ export function Contact() {
               <div className="flex gap-4">
                 <motion.a
                   whileHover={{ y: -4, scale: 1.1 }}
-                  href="#"
+                  href="https://github.com/kimmengngorng"
                   className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
                 >
                   <Github size={20} />
@@ -218,7 +218,7 @@ export function Contact() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="max-w-7xl mx-auto mt-32 pt-8 border-t border-white/10 text-center text-gray-400"
       >
-        <p>© 2026 Sokchan. All rights reserved.</p>
+        <p>© 2026 Kim MengNgorng. All rights reserved.</p>
       </motion.div>
     </section>
   );

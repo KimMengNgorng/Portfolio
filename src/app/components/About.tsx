@@ -67,7 +67,7 @@ export function About() {
             About <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Web Developer | Computer Science Graduate
+            Web Developer | Management Information System (MIS) Graduate
           </p>
         </motion.div>
 

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Facebook, Github, Instagram, Linkedin, Mail, Send } from 'lucide-react';
 
 export function Hero() {
   const containerVariants = {
@@ -110,6 +110,27 @@ export function Hero() {
             className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
           >
             <Github size={20} />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -4, scale: 1.1 }}
+            href="https://www.instagram.com/kimmengngorng/?hl=en"
+            className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+          >
+            <Instagram size={20} />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -4, scale: 1.1 }}
+            href="\https://www.facebook.com/kim.mengngorng.12"
+            className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+          >
+            <Facebook size={20} />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -4, scale: 1.1 }}
+            href="https://t.me/MengNgorng_Kim"
+            className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+          >
+            <Send size={20} />
           </motion.a>
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}

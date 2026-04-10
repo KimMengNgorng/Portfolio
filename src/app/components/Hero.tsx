@@ -106,7 +106,9 @@ export function Hero() {
         <motion.div variants={itemVariants} className="flex items-center justify-center gap-6">
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
-            href="#"
+            href="https://github.com/kimmengngorng"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
           >
             <Github size={20} />
@@ -114,13 +116,17 @@ export function Hero() {
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
             href="https://www.instagram.com/kimmengngorng/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
           >
             <Instagram size={20} />
           </motion.a>
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
-            href="\https://www.facebook.com/kim.mengngorng.12"
+            href="https://www.facebook.com/kim.mengngorng.12"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
           >
             <Facebook size={20} />
@@ -128,24 +134,28 @@ export function Hero() {
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
             href="https://t.me/MengNgorng_Kim"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
           >
             <Send size={20} />
           </motion.a>
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
-            href="#"
-            className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
-          >
-            <Linkedin size={20} />
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -4, scale: 1.1 }}
-            href="#"
+            href="mailto:mengngorngkim@gmail.com"
             className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
           >
             <Mail size={20} />
           </motion.a>
+          <motion.a
+                  whileHover={{ y: -4, scale: 1.1 }}
+                  href="https://www.linkedin.com/in/kim-mengngorng-123456789/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+                >
+                  <Linkedin size={20} />
+                </motion.a>
         </motion.div>
       </motion.div>
 

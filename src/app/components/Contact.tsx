@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { useState } from 'react';
 
 export function Contact() {
@@ -113,13 +113,44 @@ export function Contact() {
                 <motion.a
                   whileHover={{ y: -4, scale: 1.1 }}
                   href="https://github.com/kimmengngorng"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
                 >
                   <Github size={20} />
                 </motion.a>
                 <motion.a
                   whileHover={{ y: -4, scale: 1.1 }}
-                  href="#"
+                  href="https://www.instagram.com/kimmengngorng/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+                >
+                  <Instagram size={20} />
+                </motion.a>
+                <motion.a
+                  whileHover={{ y: -4, scale: 1.1 }}
+                  href="https://www.facebook.com/kim.mengngorng.12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+                >
+                  <Facebook size={20} />
+                </motion.a>
+                <motion.a
+                  whileHover={{ y: -4, scale: 1.1 }}
+                  href="https://t.me/MengNgorng_Kim"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
+                >
+                  <Send size={20} />
+                </motion.a>
+                <motion.a
+                  whileHover={{ y: -4, scale: 1.1 }}
+                  href="https://www.linkedin.com/in/kim-mengngorng-123456789/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-gray-300 hover:text-white hover:border-white/30 transition-colors"
                 >
                   <Linkedin size={20} />

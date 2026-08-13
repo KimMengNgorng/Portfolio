@@ -1,162 +1,187 @@
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
-import { Code, Palette, Zap, Briefcase, GraduationCap } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Code, Palette, Zap, Briefcase, GraduationCap, Server, Layers } from 'lucide-react';
 import profileImg from '../../assets/image.png';
 
 export function About() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-
   const features = [
     {
       icon: Code,
-      title: 'Full-Stack Development',
-      description: 'Building scalable web applications with modern technologies and clean architecture',
+      title: 'Full-Stack Dev',
+      description: 'Building scalable web applications with clean architecture',
     },
     {
       icon: Palette,
-      title: 'Responsive Design',
-      description: 'Creating mobile-first, user-friendly interfaces that work seamlessly across all devices',
+      title: 'UI/UX Design',
+      description: 'Creating mobile-first, user-friendly premium interfaces',
     },
     {
-  icon: Zap,
-  title: 'API Integration',
-  description: 'Integration of Phillip Bank KHQR API, Bakong KHQR API, and ABA PayWay payment gateway',
-}
-,
+      icon: Zap,
+      title: 'API Integration',
+      description: 'Phillip Bank KHQR, Bakong KHQR, ABA PayWay',
+    },
+    {
+      icon: Layers,
+      title: 'System Analysis',
+      description: 'Analyzing business requirements to design and architect tailored enterprise systems',
+    },
   ];
 
   const experience = [
     {
       icon: Briefcase,
-      title: 'Developer at TSD Co., Ltd.',
+      title: 'Senior Developer at TSD Co., Ltd.',
       period: '2025 - Present',
-      description: 'Technology Solution Development',
+      description: [
+        'Delivered numerous high-impact projects',
+        'Developed scalable POS systems',
+        'Direct client requirements gathering',
+        'Server infrastructure management',
+      ],
     },
     {
       icon: Briefcase,
       title: 'Full-Stack Web Developer',
       period: '2025 - 2026',
-      description: 'Target Store Online Shop - E-commerce platform with payment integration',
+      description: ['Target Store Online Shop', 'E-commerce platform with payment integration'],
     },
     {
       icon: GraduationCap,
-      title: 'Management Information System(MIS) Graduate',
+      title: 'MIS Graduate',
       period: '2022 - 2025',
-      description: 'SETEC Institute - Graduated with a strong foundation in information systems, database management, and software development',
+      description: ['SETEC Institute', 'Database management & software development'],
     },
   ];
 
   return (
-    <section ref={ref} id="about" className="min-h-screen bg-black py-32 px-6 overflow-hidden">
-      <motion.div style={{ opacity }} className="max-w-7xl mx-auto">
+    <section id="about" className="min-h-screen bg-[#030712] py-32 px-6 relative">
+      {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-violet-600/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[20%] left-[10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl mb-6 text-white">
-            About <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Me</span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+            About <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Web Developer | Management Information System (MIS) Graduate
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
+            Merging technical expertise with design thinking to build exceptional digital products.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
-          <motion.div style={{ y }} className="relative">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity" />
-              <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10">
-                <img
-                  src={profileImg}
-                  alt="Sokchan"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        {/* Bento Box Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+          
+          {/* Profile Image - Spans 2 cols, 2 rows */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group bg-white/5 border border-white/10"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity" />
+            <img
+              src={profileImg}
+              alt="Kim MengNgorng"
+              className="w-full h-full object-cover object-top filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+            />
+            <div className="absolute bottom-6 left-6 z-20">
+              <h3 className="text-2xl font-bold text-white mb-2">Kim MengNgorng</h3>
+              <p className="text-gray-300 font-light flex items-center gap-2">
+                <Server size={16} className="text-cyan-400" /> Phnom Penh, Cambodia
+              </p>
             </div>
           </motion.div>
 
-          <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-gray-300 space-y-4"
-            >
-              <p className="text-lg">
-                I'm Kim MengNgorng, a Management Information System(MIS) graduate from the SETEC Institute. I consider myself a responsible, organized, and hardworking individual.
-              </p>
-              <p className="text-lg">
-                I'm eager to apply my knowledge and gain new experiences in my professional career. Currently working as a Developer at Technology Solution Development TSD Co., Ltd.
-              </p>
-            </motion.div>
+          {/* Intro Text - Spans 2 cols, 1 row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="md:col-span-2 lg:col-span-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 flex flex-col justify-center hover:bg-white/10 transition-colors"
+          >
+            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+               <Zap className="text-violet-400" size={24} /> Driven by impact
+            </h3>
+            <p className="text-gray-400 leading-relaxed font-light">
+              I am a dedicated Web Developer and MIS graduate. With a strong foundation in both technical development and business information systems, I architect scalable solutions that not only look beautiful but perform exceptionally.
+            </p>
+          </motion.div>
 
-            <div className="grid gap-6">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  whileHover={{ x: 10 }}
-                  className="flex gap-4 items-start group"
-                >
-                  <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl border border-white/10 group-hover:border-white/30 transition-colors">
-                    <feature.icon className="text-blue-400" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-400">{feature.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          {/* Feature Cards - 1 col, 1 row each */}
+          {features.map((feature, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex flex-col justify-between group hover:border-violet-500/50 transition-colors relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 rounded-bl-[100px] -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                <feature.icon size={24} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
+                <p className="text-sm text-gray-400 font-light">{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Experience Timeline */}
+        {/* Experience Timeline Box */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-20"
+          className="mt-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 lg:p-12"
         >
-          <h3 className="text-3xl md:text-4xl text-white mb-12 text-center">
-            Experience & <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Education</span>
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex items-center gap-4 mb-10">
+            <h3 className="text-3xl font-bold text-white">Experience</h3>
+            <div className="flex-1 h-px bg-gradient-to-r from-white/20 to-transparent" />
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            {/* Connecting line for desktop */}
+            <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-px bg-white/10" />
+            
             {experience.map((item, index) => (
               <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 50 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/30 transition-colors"
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="relative z-10 flex flex-col"
               >
-                <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl border border-white/10 mb-4">
-                  <item.icon className="text-blue-400" size={24} />
+                <div className="w-12 h-12 bg-[#030712] border-2 border-violet-500 rounded-full flex items-center justify-center text-violet-400 mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)] mx-auto md:mx-0">
+                  <item.icon size={20} />
                 </div>
-                <div className="text-sm text-blue-400 mb-2">{item.period}</div>
-                <h4 className="text-xl text-white mb-2">{item.title}</h4>
-                <p className="text-gray-400">{item.description}</p>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex-1 hover:bg-white/10 transition-colors">
+                  <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-2 block">{item.period}</span>
+                  <h4 className="text-lg font-bold text-white mb-4">{item.title}</h4>
+                  <ul className="text-sm text-gray-400 font-light space-y-2 list-disc list-inside">
+                    {item.description.map((desc, i) => (
+                      <li key={i}>{desc}</li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

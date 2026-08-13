@@ -44,6 +44,7 @@ export function Skills() {
 
   const additionalSkills = [
     'Payment Integration (KHQR)',
+    'ABA Bank Integration (PayWay)',
     'Bakong API',
     'Telegram Bot API',
     'Firebase',

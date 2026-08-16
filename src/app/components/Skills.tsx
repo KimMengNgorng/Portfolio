@@ -10,10 +10,10 @@ export function Skills() {
     {
       name: 'Frontend',
       skills: [
-        { name: 'React.js', level: 90 },
+        { name: 'React.js', level: 50 },
         { name: 'HTML/CSS', level: 95 },
-        { name: 'JavaScript', level: 88 },
-        { name: 'Flutter', level: 75 },
+        { name: 'JavaScript', level: 80 },
+        { name: 'Flutter', level: 50 },
       ],
       color: 'from-cyan-500 to-blue-600',
       shadow: 'group-hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]'

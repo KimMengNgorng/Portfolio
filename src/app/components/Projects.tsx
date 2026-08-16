@@ -5,10 +5,10 @@ import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 export function Projects() {
   const projects = [
     {
-      title: 'Your Project Title',
-      description: 'Project description goes here. Describe the technologies used and what the project accomplishes.',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjb2Rpbmd8ZW58MXx8fHwxNzY4NDY3MDQwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'Node.js', 'Tailwind'],
+      title: 'Angkor Railway System',
+      description: 'A comprehensive Online Railway Reservation System (ORRS) featuring seamless ticket booking, real-time seat selection, payment integration, and dedicated portals for passengers, employees, and administrators.',
+      image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80&w=1080',
+      tags: ['PHP', 'MySQL', 'JavaScript', 'CSS'],
     },
   ];
 

@@ -18,11 +18,23 @@ export function Contact() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // const botId = '8578611132:AAHlMWH9HJN4-ubw45G7Y-TSxrVHQ78RoCo';
-    // const chatId = '-5439929139';
+    const botId = '8578611132:AAHlMWH9HJN4-ubw45G7Y-TSxrVHQ78RoCo';
+    const chatId = '-5439929139';
     const text = `New Message from Portfolio:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'N/A'}\nCompany: ${formData.company || 'N/A'}\nMessage: ${formData.message}`;
 
     try {
+      // Check sender's IP address
+      const ipResponse = await fetch('https://api.ipify.org?format=json');
+      const ipData = await ipResponse.json();
+
+      if (ipData.ip === '43.245.32.65') {
+        // Pretend it was successful to trick the spammer
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+        setIsSubmitting(false);
+        return;
+      }
+
       const response = await fetch(`https://api.telegram.org/bot${botId}/sendMessage`, {
         method: 'POST',
         headers: {

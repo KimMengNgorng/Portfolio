@@ -18,8 +18,8 @@ export function Contact() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    const botId = '8578611132:AAHlMWH9HJN4-ubw45G7Y-TSxrVHQ78RoCo';
-    const chatId = '-5439929139';
+    // const botId = '8578611132:AAHlMWH9HJN4-ubw45G7Y-TSxrVHQ78RoCo';
+    // const chatId = '-5439929139';
     const text = `New Message from Portfolio:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'N/A'}\nCompany: ${formData.company || 'N/A'}\nMessage: ${formData.message}`;
 
     try {
